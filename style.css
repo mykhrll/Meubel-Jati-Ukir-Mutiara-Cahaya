@@ -1,0 +1,182 @@
+:root {
+  --brown: #8B5E3C;
+  --cream: #F5E9DA;
+  --white: #FFFFFF;
+}
+
+/* Reset dasar */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cream);
+  color: var(--brown);
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--brown);
+  padding: 12px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 85px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+/* Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hilangkan underline bawaan */
+.navbar a.active {
+  text-decoration: none;
+}
+
+/* Hover animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  transform: scale(1.08);
+  color: #FFD700;
+}
+
+/* Banner */
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-container {
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 2s ease-in-out;
+}
+.banner-container:hover .banner {
+  transform: scale(1.05);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(139,94,60,0.7));
+}
+
+/* Konten */
+.content {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.content p {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* Card */
+.feature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 25px;
+  max-width: 280px;
+  flex: 1 1 250px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background-color: var(--brown);
+  color: var(--cream);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+/* Scroll animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+}
