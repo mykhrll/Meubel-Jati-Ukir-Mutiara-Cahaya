@@ -17,6 +17,7 @@ include 'db.php';
             <a href="produk.php?kategori=kursi" class="btn btn-outline-brown rounded-pill m-1 <?= (isset($_GET['kategori']) && $_GET['kategori']=='kursi') ? 'active bg-warning text-white border-0' : '' ?>">Kursi</a>
             <a href="produk.php?kategori=meja" class="btn btn-outline-brown rounded-pill m-1 <?= (isset($_GET['kategori']) && $_GET['kategori']=='meja') ? 'active bg-warning text-white border-0' : '' ?>">Meja</a>
             <a href="produk.php?kategori=lemari" class="btn btn-outline-brown rounded-pill m-1 <?= (isset($_GET['kategori']) && $_GET['kategori']=='lemari') ? 'active bg-warning text-white border-0' : '' ?>">Lemari</a>
+            <a href="produk.php?kategori=tempat-tidur" class="btn btn-outline-brown rounded-pill m-1 <?= (isset($_GET['kategori']) && $_GET['kategori']=='tempat-tidur') ? 'active bg-warning text-white border-0' : '' ?>">Tempat Tidur</a>
         </div>
     </div>
 
